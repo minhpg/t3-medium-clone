@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, ReactNode } from "react";
+import React, { useState, useEffect, ReactElement } from "react";
 
 const GRID_ROWS = 12;
 const GRID_COLS = 22;
-export default function MGrid(): ReactNode {
+export default function MGrid(): ReactElement {
   const createInitialGrid = (): boolean[][] => {
     return Array.from({ length: GRID_COLS }, () =>
       Array.from({ length: GRID_ROWS }, () =>
@@ -17,7 +17,7 @@ export default function MGrid(): ReactNode {
 
   useEffect(() => {
     const addRandomTile = () => {
-      const arr: any = [...grid];
+      const arr: (boolean)[][] = [...grid];
 
       const randomColIndex = Math.floor(Math.random() * (GRID_COLS - 1));
       const randomRowIndex = Math.floor(Math.random() * (GRID_ROWS - 1));

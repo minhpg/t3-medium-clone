@@ -3,30 +3,29 @@ import { useEffect, useRef, useState } from "react";
 import MediumLogo from "./MediumLogo.component";
 import dynamic from "next/dynamic";
 
-const MGrid = dynamic(
-    () => import('./MGrid.component'),
-    { ssr: false }
-)
+const MGrid = dynamic(() => import("./MGrid.component"), { ssr: false });
 
 export default function HomeTopSection() {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [isScrollComplete, setIsScrollComplete] = useState(false);
 
-  const [height, setHeight] = useState<any>(0);
+  const [height, setHeight] = useState<number>(0);
 
   useEffect(() => {
     if (heroRef) {
-      setHeight(heroRef.current?.clientHeight);
+      if (heroRef.current) {
+        setHeight(heroRef.current.clientHeight);
+      }
     }
   });
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavbarColor);
-  }, [])
+  }, []);
 
   const changeNavbarColor = () => {
     if (height > 0) {
-      if (window.scrollY >= (height-100)) {
+      if (window.scrollY >= height - 100) {
         setIsScrollComplete(true);
       } else {
         setIsScrollComplete(false);
@@ -37,7 +36,7 @@ export default function HomeTopSection() {
   return (
     <>
       <nav
-        className={`fixed w-full border-b border-black p-5 z-50 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
+        className={`fixed z-50 w-full border-b border-black p-5 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
       >
         <div className="flex w-full justify-between lg:container md:px-10 lg:mx-auto lg:max-w-7xl">
           <MediumLogo className="w-40 self-center" />
@@ -54,7 +53,9 @@ export default function HomeTopSection() {
             <a className="hidden p-3 sm:flex">
               <button>Sign in</button>
             </a>
-            <a className={`rounded-3xl bg-black p-3 text-white ${isScrollComplete ? `bg-green-600` : `bg-black`}`}>
+            <a
+              className={`rounded-3xl bg-black p-3 text-white ${isScrollComplete ? `bg-green-600` : `bg-black`}`}
+            >
               <button>Get started</button>
             </a>
           </div>

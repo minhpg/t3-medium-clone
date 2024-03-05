@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode, ReactPropTypes } from "react";
 
-export default function MediumLogo(props: any): ReactNode {
+export default function MediumLogo(props: ReactPropTypes): ReactNode {
   return (
     <div {...props}>
       <svg viewBox="0 0 3940 610" className="bs q">

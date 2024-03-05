@@ -31,6 +31,8 @@ const config = {
         checksVoidReturn: { attributes: false },
       },
     ],
+    "@typescript-eslint/ban-ts-ignore": "off",
+    // "@typescript-eslint/strict-boolean-expressions": "warn"
   },
 };
 
