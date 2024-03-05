@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, ReactElement } from "react";
+import React, { useState, useEffect } from "react";
 
 const GRID_ROWS = 18;
 const GRID_COLS = 20;
-export default function MGrid(): ReactElement {
+
+export default function MGrid() {
   const createInitialGrid = (): boolean[][] => {
     return Array.from({ length: GRID_COLS }, () =>
       Array.from({ length: GRID_ROWS }, () =>

@@ -1,7 +1,6 @@
 import MediumLogo from "@/pages/components/MediumLogo.component";
-import { ReactNode } from "react";
 
-export default function PostsNavbar(): ReactNode {
+export default function PostsNavbar() {
   return (
     <nav className="w-full bg-white shadow">
       <div className="flex w-full justify-between md:hidden px-2 py-2">

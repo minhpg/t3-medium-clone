@@ -17,7 +17,7 @@ export default function RecentArticalList() {
           <RecentArticalListItem />
           <RecentArticalListItem />
         </div>
-        <div className="self-start sticky top-32 order-first col-span-12 md:order-last md:col-span-4">
+        <div className="md:self-start md:sticky md:top-32 order-first col-span-12 md:order-last md:col-span-4">
           <div className="font-semibold">
             Discover more of what matters to you
           </div>
@@ -37,7 +37,7 @@ export default function RecentArticalList() {
               See more topics
             </a>
           </div>
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-light text-slate-500">
+          <div className="hidden md:flex mt-5 flex-wrap gap-x-5 gap-y-2 text-sm font-light text-slate-500">
             <a className="hover:underline">Help</a>
             <a className="hover:underline">Status</a>
             <a className="hover:underline">About</a>
