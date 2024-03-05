@@ -17,7 +17,7 @@ export default function RecentArticalList() {
           <RecentArticalListItem />
           <RecentArticalListItem />
         </div>
-        <div className="order-first col-span-12 md:order-last md:col-span-4">
+        <div className="self-start sticky top-32 order-first col-span-12 md:order-last md:col-span-4">
           <div className="font-semibold">
             Discover more of what matters to you
           </div>

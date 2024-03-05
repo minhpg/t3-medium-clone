@@ -17,11 +17,11 @@ export default function HomeTopSection() {
         setHeight(heroRef.current.clientHeight);
       }
     }
-  });
+  }, [heroRef]);
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavbarColor);
-  }, []);
+  }, [height]);
 
   const changeNavbarColor = () => {
     if (height > 0) {
@@ -36,7 +36,7 @@ export default function HomeTopSection() {
   return (
     <>
       <nav
-        className={`fixed z-50 w-full border-b border-black p-5 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
+        className={`self-start sticky top-0 z-50 w-full border-b border-black p-5 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
       >
         <div className="flex w-full justify-between lg:container md:px-10 lg:mx-auto lg:max-w-7xl">
           <MediumLogo className="w-40 self-center" />
@@ -62,12 +62,12 @@ export default function HomeTopSection() {
         </div>
       </nav>
       <div
-        className="relative border-b border-black bg-[#FFC017] px-5 py-8 md:py-24"
+        className="relative border-b border-black bg-[#FFC017] px-5 py-8 md:py-10"
         ref={heroRef}
       >
         <MGrid />
-        <div className="flex w-full lg:container md:px-10 lg:mx-auto lg:max-w-7xl">
-          <div className="flex h-full flex-col justify-center gap-10 py-24">
+        <div className="flex w-full lg:container md:px-10 lg:mx-auto lg:max-w-7xl ">
+          <div className="flex h-full flex-col justify-center gap-10 py-24 bg-[#FFC017] z-20">
             <div className="font-serif text-7xl sm:text-8xl">Stay curious.</div>
             <div className="w-full text-xl leading-6 sm:w-5/6">
               Discover stories, thinking, and expertise from writers on any

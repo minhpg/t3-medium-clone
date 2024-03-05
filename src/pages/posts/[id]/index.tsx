@@ -145,7 +145,7 @@ export default function PostPage() {
             </div>
           </div>
         </div>
-        <div className="prose prose-xl container mx-auto mt-10 max-w-3xl px-5 font-serif">
+        <div className="prose prose-lg md:prose-normal container mx-auto mt-10 max-w-3xl px-5 font-serif">
           <figure>
             <img
               src="https://miro.medium.com/v2/resize:fit:2000/format:webp/0*FEP16gXObxcHgiVz.jpg"
@@ -201,17 +201,19 @@ export default function PostPage() {
             “These waves can be every bit as devastating as a tidal wave in
             property damage.” - Frank Herbert
           </blockquote>{" "}
-          <div className="blur-sm">
+          <div className="relative">
+            <div className="absolute inset-0 h-full z-10 bg-gradient-to-b from-transparent to-white"></div>
+            <p>
             This struggle between man and nature — the effort to form something
             as wild as a landscape into a stable environment to build on — would
             be the foundation for Herbert’s debut novel, Dune.
-          </div>
-          <div className="blur-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             aperiam numquam voluptas dolorem sint provident est quae veniam,
             amet ab a rerum, adipisci quasi quis magni expedita? Laborum, omnis
             aperiam.
+          </p>
           </div>
+
         </div>
         <div className="mx-auto my-10 max-w-xl text-center">
           <div className="font-serif text-2xl">

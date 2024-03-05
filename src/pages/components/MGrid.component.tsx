@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, ReactElement } from "react";
 
-const GRID_ROWS = 12;
-const GRID_COLS = 22;
+const GRID_ROWS = 18;
+const GRID_COLS = 20;
 export default function MGrid(): ReactElement {
   const createInitialGrid = (): boolean[][] => {
     return Array.from({ length: GRID_COLS }, () =>

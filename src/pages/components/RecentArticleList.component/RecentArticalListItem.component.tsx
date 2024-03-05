@@ -61,6 +61,8 @@ export default function RecentArticalListItem() {
             alt="image"
             style={{
               objectFit: "cover",
+              width: "auto",
+              height: "auto"
             }}
           />
         </div>
