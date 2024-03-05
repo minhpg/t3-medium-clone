@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ArticleAuthorDetails from "../ArticleAuthorDetails.component";
 
 export interface TrendingGridItemProps {
@@ -12,10 +13,10 @@ export default function TrendingGridItem({ index }: TrendingGridItemProps) {
       </div>
       <div>
         <ArticleAuthorDetails />
-        <a className="text-md mt-1 text-wrap font-bold leading-5 hover:underline">
+        <Link href="/posts/test" className="text-md mt-1 text-wrap font-bold leading-5 hover:underline">
           Visualize your RAG Data — Evaluate your Retrieval-Augmented Generation
           System
-        </a>
+        </Link>
         <div className="mt-2 flex gap-3">
           <div className="text-xs font-light text-slate-600">
             Mar 3, 2024 · 12 min read

@@ -22,7 +22,7 @@ export default function TrendingGrid() {
       </div>
       <div className="mt-6 grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {Array(6).fill(null).map((_, index) => (
-          <TrendingGridItem index={index+1} />
+          <TrendingGridItem index={index+1} key={index}/>
         ))}
       </div>
     </div>

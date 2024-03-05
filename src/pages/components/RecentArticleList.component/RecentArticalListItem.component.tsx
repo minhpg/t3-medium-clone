@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArticleAuthorDetails from "../ArticleAuthorDetails.component";
+import Link from "next/link";
 
 export default function RecentArticalListItem() {
   return (
@@ -7,7 +8,12 @@ export default function RecentArticalListItem() {
       <div className="grid grid-cols-6 gap-5">
         <div className="col-span-4">
           <ArticleAuthorDetails />
-          <div className="mt-1 text-lg font-bold">The Origins Of Dune</div>
+          <Link
+            href="/posts/test"
+            className="mt-1 text-lg font-bold hover:underline"
+          >
+            The Origins Of Dune
+          </Link>
           <div className="mt-1 text-sm font-light text-slate-500">
             Before you watch part 2 of Dune, learn about the inspirations and
             origins of Frank Herbert’s classic SciFi novel
@@ -54,7 +60,7 @@ export default function RecentArticalListItem() {
             className="h-full self-center"
             alt="image"
             style={{
-                objectFit: "cover"
+              objectFit: "cover",
             }}
           />
         </div>
