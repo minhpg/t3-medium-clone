@@ -36,7 +36,7 @@ export default function HomeTopSection() {
   return (
     <>
       <nav
-        className={`self-start sticky top-0 z-50 w-full border-b border-black p-5 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
+        className={`self-start fixed top-0 z-50 w-full border-b border-black px-5 py-4 transition-all duration-200 ${isScrollComplete ? `bg-white` : `bg-[#FFC017]`}`}
       >
         <div className="flex w-full justify-between lg:container md:px-10 lg:mx-auto lg:max-w-7xl">
           <MediumLogo className="w-40 self-center" />
@@ -62,7 +62,7 @@ export default function HomeTopSection() {
         </div>
       </nav>
       <div
-        className="relative border-b border-black bg-[#FFC017] px-5 py-8 md:py-10"
+        className="relative border-b border-black bg-[#FFC017] px-5 py-8"
         ref={heroRef}
       >
         <MGrid />

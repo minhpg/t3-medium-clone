@@ -1,9 +1,11 @@
+import Link from "next/link";
+import { BottomNavigationItems } from "../BottomNavigationItems";
 import RecentArticalListItem from "./RecentArticalListItem.component";
 
 export default function RecentArticalList() {
   return (
     <div className="mt-10 px-5 lg:container md:px-10 md:px-10 lg:mx-auto lg:max-w-7xl">
-      <div className="grid grid-cols-12 gap-5 lg:gap-10 w-full">
+      <div className="grid w-full grid-cols-12 gap-5 lg:gap-10">
         <div className="col-span-12 flex flex-col gap-10 md:col-span-8">
           <RecentArticalListItem />
           <RecentArticalListItem />
@@ -17,7 +19,7 @@ export default function RecentArticalList() {
           <RecentArticalListItem />
           <RecentArticalListItem />
         </div>
-        <div className="md:self-start md:sticky md:top-32 order-first col-span-12 md:order-last md:col-span-4">
+        <div className="order-first col-span-12 md:sticky md:top-28 md:order-last md:col-span-4 md:self-start">
           <div className="font-semibold">
             Discover more of what matters to you
           </div>
@@ -37,16 +39,12 @@ export default function RecentArticalList() {
               See more topics
             </a>
           </div>
-          <div className="hidden md:flex mt-5 flex-wrap gap-x-5 gap-y-2 text-sm font-light text-slate-500">
-            <a className="hover:underline">Help</a>
-            <a className="hover:underline">Status</a>
-            <a className="hover:underline">About</a>
-            <a className="hover:underline">Careers</a>
-            <a className="hover:underline">Blog</a>
-            <a className="hover:underline">Privacy</a>
-            <a className="hover:underline">Terms</a>
-            <a className="hover:underline">Text to speech</a>
-            <a className="hover:underline">Teams</a>
+          <div className="mt-5 hidden flex-wrap gap-x-5 gap-y-2 text-sm font-light text-slate-500 md:flex">
+            {BottomNavigationItems.map(({ href, name }) => (
+              <Link key={name} href={href} className="hover:underline">
+                {name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

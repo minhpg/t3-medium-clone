@@ -35,7 +35,7 @@ export default function MGrid() {
   }, [grid]);
 
   return (
-    <div className="absolute right-0 z-0 hidden h-full flex-col overflow-hidden md:flex">
+    <div className="select-none absolute right-0 z-0 hidden h-full flex-col overflow-hidden md:flex">
       {grid.map((row, rowIndex) => (
         <div key={rowIndex} className="flex">
           {row.map((isVisible, columnIndex) => (

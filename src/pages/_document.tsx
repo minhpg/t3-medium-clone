@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className={`antialiased`}>
+        <body className={`scroll-pt-0 antialiased`}>
           <Main />
           <NextScript />
         </body>
