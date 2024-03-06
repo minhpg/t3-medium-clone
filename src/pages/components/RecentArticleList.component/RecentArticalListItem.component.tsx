@@ -9,18 +9,18 @@ export default function RecentArticalListItem() {
         <div className="col-span-4">
           <ArticleAuthorDetails />
           <Link
-            href="/posts/test"
+            href="/story/test"
             className="mt-1 text-lg font-bold hover:underline"
           >
             The Origins Of Dune
           </Link>
-          <div className="mt-1 text-sm font-light text-slate-500">
+          <div className="mt-1 text-sm font-light text-gray-500">
             Before you watch part 2 of Dune, learn about the inspirations and
             origins of Frank Herbert’s classic SciFi novel
           </div>
           <div className="space-between mt-2 flex gap-3">
             <div className="flex w-full gap-3">
-              <div className="text-xs font-light text-slate-600">
+              <div className="text-xs font-light text-gray-600">
                 Mar 3, 2024 · 12 min read
               </div>
               <div className="text-yellow-500">

@@ -24,22 +24,22 @@ export default function RecentArticalList() {
             Discover more of what matters to you
           </div>
           <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2 text-sm font-light text-black">
-            <a className="rounded-3xl bg-slate-100 p-3">Programming</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Data Science</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Machine Learning</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Technology</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Self Improvement</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Writing</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Relationships</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Productivity</a>
-            <a className="rounded-3xl bg-slate-100 p-3">Politics</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Programming</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Data Science</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Machine Learning</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Technology</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Self Improvement</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Writing</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Relationships</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Productivity</a>
+            <a className="rounded-3xl bg-gray-100 p-3">Politics</a>
           </div>
-          <div className="border-b border-slate-200 py-5">
+          <div className="border-b border-gray-200 py-5">
             <a className="text-sm text-green-600 hover:underline">
               See more topics
             </a>
           </div>
-          <div className="mt-5 hidden flex-wrap gap-x-5 gap-y-2 text-sm font-light text-slate-500 md:flex">
+          <div className="mt-5 hidden flex-wrap gap-x-5 gap-y-2 text-sm font-light text-gray-500 md:flex">
             {BottomNavigationItems.map(({ href, name }) => (
               <Link key={name} href={href} className="hover:underline">
                 {name}

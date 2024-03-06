@@ -1,11 +1,13 @@
+import { useSessionContext } from "@/pages/contexts/Session.context";
 import { useState } from "react";
 
 export default function SubscribeBanner() {
+  // const { session } = useSessionContext();
   const [show, setShow] = useState(true);
 
   if (!show) return;
   return (
-    <div className="relative hidden bg-slate-100 sm:block">
+    <div className="relative hidden bg-gray-100 sm:block">
       <div className="w-full justify-between px-5 py-2 text-center text-sm font-light">
         Get unlimited access for a discounted price!{" "}
         <a className="font-normal underline">Details</a>

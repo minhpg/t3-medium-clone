@@ -1,9 +1,9 @@
 export default function PostAuthorDetails() {
   return (
-    <div className="py-10 border-b border-slate-200">
+    <div className="py-10 border-b border-gray-200">
       <div className="flex justify-between">
         <div className="relative h-20 w-20 rounded-full bg-black">
-          <div className="absolute -right-5 top-10 h-10 w-10 rounded-full border-2 border-white bg-slate-500"></div>
+          <div className="absolute -right-5 top-10 h-10 w-10 rounded-full border-2 border-white bg-gray-500"></div>
         </div>
         <div className="self-end md:hidden">
           <div className="flex gap-3 text-sm text-white">
@@ -32,7 +32,7 @@ export default function PostAuthorDetails() {
           <div className="text-xl font-semibold">
             Written by Aspiring Reader
           </div>
-          <div className="text-sm font-light text-slate-500">
+          <div className="text-sm font-light text-gray-500">
             <span className="text-black">51K followers</span> · Editor for{" "}
             <a className="text-black hover:underline">Hooked on Books</a>
           </div>

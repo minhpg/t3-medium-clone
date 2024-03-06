@@ -22,6 +22,9 @@ const config = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  // images: {
+  //   domains: ['*googleusercontent.com'],
+  // },
 };
 
 export default config;

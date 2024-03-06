@@ -1,13 +1,13 @@
 export default function ArticleAuthorDetails() {
   return (
     <div className="flex gap-2 py-2">
-      <div className="h-5 w-5 rounded-xl bg-slate-300"></div>
+      <div className="h-5 w-5 rounded-xl bg-gray-300"></div>
       <div className="self-center text-xs font-semibold">
         <div className="group relative inline-block">
           <a className="hover:underline">Markus Stoll</a>
-          <div className="absolute left-20 top-2 w-80 scale-0 rounded rounded bg-white p-5 font-normal shadow-xl group-hover:scale-100">
+          <div className="absolute left-20 top-2 z-50 w-80 scale-0 rounded rounded bg-white p-5 font-normal shadow-xl group-hover:scale-100">
             <div className="flex justify-start gap-3">
-              <div className="h-8 w-8 rounded-full bg-slate-200 p-1 text-white">
+              <div className="h-8 w-8 rounded-full bg-gray-200 p-1 text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -29,15 +29,15 @@ export default function ArticleAuthorDetails() {
               CTO, Co-Founder at Renumics | 🤖 unstructured ML data | 📊
               interactive ML data visualization | 🔍 ML data exploration{" "}
             </div>
-            <div className="mt-3 flex justify-between border-t border-slate-200 pt-3">
-              <div className="self-center text-slate-500">1.4K followers</div>
+            <div className="mt-3 flex justify-between border-t border-gray-200 pt-3">
+              <div className="self-center text-gray-500">1.4K followers</div>
               <a className="rounded-3xl bg-green-500 px-3 py-1 text-white">
                 Follow
               </a>
             </div>
           </div>
         </div>{" "}
-        <span className="text-slate-500">in</span>{" "}
+        <span className="text-gray-500">in</span>{" "}
         <a className="hover:underline">Towards Data Science</a>
       </div>
     </div>

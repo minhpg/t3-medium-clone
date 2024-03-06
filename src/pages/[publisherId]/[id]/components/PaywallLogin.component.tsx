@@ -1,4 +1,8 @@
+import { useAuthModalContext } from "@/pages/contexts/AuthModal.context";
+
 export default function PaywallLogin() {
+  const { triggerSignIn } = useAuthModalContext()
+
   return (
     <div className="mx-auto my-10 max-w-xl px-5 text-center">
       <div className="font-serif text-2xl">
@@ -60,7 +64,7 @@ export default function PaywallLogin() {
           </svg>
           Sign up with Facebook
         </a>
-        <a className="relative rounded-full border border-black px-3 py-2">
+        {/* <a className="relative rounded-full border border-black px-3 py-2">
           <svg
             width="24"
             height="24"
@@ -74,10 +78,10 @@ export default function PaywallLogin() {
             </g>
           </svg>
           Sign up with Email
-        </a>
+        </a> */}
       </div>
       <div className="mt-10">
-        Already have an account? <a className="underline">Sign in</a>
+        Already have an account? <a className="underline" onClick={triggerSignIn}>Sign in</a>
       </div>
     </div>
   );

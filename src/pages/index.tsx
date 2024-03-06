@@ -1,15 +1,29 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 
 import { api } from "@/utils/api";
-import TrendingGrid from "./components/TrendingGrid.component";
 import RecentArticalList from "./components/RecentArticleList.component";
 import HomeTopSection from "./components/HomeTopSection.component";
+import TrendingGrid from "./components/TrendingGrid.component";
+import { GetServerSideProps } from "next";
+import { getServerAuthSession } from "@/server/auth";
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const session = await getServerAuthSession(ctx);
+  if (session) {
+    return {
+      redirect: {
+        destination: "/home",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: { session },
+  };
+};
 
 export default function Home() {
-  // const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
   return (
     <>
       <Head>
@@ -18,36 +32,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeTopSection />
-      <main className="mb-10">
-        <div className="border-b border-slate-200">
+      <div className="mb-10">
+        <div className="border-b border-gray-200">
           <TrendingGrid />
         </div>
         <RecentArticalList />
-      </main>
+      </div>
     </>
-  );
-}
-
-function AuthShowcase() {
-  const { data: sessionData } = useSession();
-
-  const { data: secretMessage } = api.post.getSecretMessage.useQuery(
-    undefined, // no input
-    { enabled: sessionData?.user !== undefined },
-  );
-
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-white">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-        {secretMessage && <span> - {secretMessage}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
   );
 }

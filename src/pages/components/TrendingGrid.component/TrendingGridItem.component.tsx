@@ -8,17 +8,17 @@ export interface TrendingGridItemProps {
 export default function TrendingGridItem({ index }: TrendingGridItemProps) {
   return (
     <div className="flex gap-5">
-      <div className="text-3xl font-bold text-slate-400 opacity-25">
+      <div className="text-3xl font-bold text-gray-400 opacity-25">
         0{index}
       </div>
       <div>
         <ArticleAuthorDetails />
-        <Link href="/posts/test" className="text-md mt-1 text-wrap font-bold leading-5 hover:underline">
+        <Link href="/story/test" className="text-md mt-1 text-wrap font-bold leading-5 hover:underline">
           Visualize your RAG Data — Evaluate your Retrieval-Augmented Generation
           System
         </Link>
         <div className="mt-2 flex gap-3">
-          <div className="text-xs font-light text-slate-600">
+          <div className="text-xs font-light text-gray-600">
             Mar 3, 2024 · 12 min read
           </div>
           <div className="text-yellow-500">

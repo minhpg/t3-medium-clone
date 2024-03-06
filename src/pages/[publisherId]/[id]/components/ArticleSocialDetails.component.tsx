@@ -1,6 +1,6 @@
 export default function ArticleSocialDetails() {
   return (
-    <div className="flex justify-between text-xs font-light text-slate-500">
+    <div className="flex justify-between text-xs font-light text-gray-500">
       <div className="flex justify-start gap-5">
         <div className="flex gap-1">
           <svg
@@ -37,7 +37,7 @@ export default function ArticleSocialDetails() {
           38
         </div>
       </div>
-      <div className="flex justify-end gap-5 text-slate-400">
+      <div className="flex justify-end gap-5 text-gray-400">
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -10,11 +10,11 @@ export default function ArticleGridCard() {
         <div className="text-xl font-bold">
           A Magical Theorem Was Undiscovered for Thousands of...
         </div>
-        <div className="text-slate-500">
+        <div className="text-gray-500">
           And is still kept hidden from students - why?
         </div>
         <div className="mt-5 flex justify-between">
-          <div className="text-xs font-light text-slate-600">
+          <div className="text-xs font-light text-gray-600">
             Mar 3, 2024 · 12 min read
           </div>
           <div className="text-yellow-500">
