@@ -1,3 +1,7 @@
+export default () => {
+  return <>{/* nothing */}</>;
+};
+
 export const BottomNavigationItems = [
   {
     href: "/",
