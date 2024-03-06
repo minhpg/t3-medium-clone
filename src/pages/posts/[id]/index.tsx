@@ -8,6 +8,7 @@ import ArticleAuthorDetails from "./components/ArticleAuthorDetails.component";
 import ArticleSocialDetails from "./components/ArticleSocialDetails.component";
 import PostSocialDetails from "./components/PostSocialDetails.component";
 import ArticleGridCard from "./components/ArticleGridCard.component";
+import SubscribeBanner from "./components/SubscribeBanner.component";
 
 export default function PostPage() {
   return (
@@ -18,6 +19,7 @@ export default function PostPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PostsNavbar />
+      <SubscribeBanner />
       <main>
         <PostTitle />
         <PostBody paywallEnabled />
@@ -35,11 +37,11 @@ export default function PostPage() {
                 <ArticleGridCard />
                 <ArticleGridCard />
               </div>
-              <div className="flex flex-col md:flex-row text-center gap-5 py-5">
-                <a className="rounded-3xl border border-black py-2 px-4 text-sm">
+              <div className="flex flex-col gap-5 py-5 text-center md:flex-row">
+                <a className="rounded-3xl border border-black px-4 py-2 text-sm">
                   See all from Casper Muller
                 </a>
-                <a className="rounded-3xl border border-black py-2 px-4 text-sm">
+                <a className="rounded-3xl border border-black px-4 py-2 text-sm">
                   See all from Cantor's Paradise
                 </a>
               </div>
@@ -52,7 +54,7 @@ export default function PostPage() {
               <div className="text-2xl font-semibold">
                 Recommended from Medium
               </div>
-              <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 border-b border-slate-200">
+              <div className="mt-8 grid grid-cols-1 gap-8 border-b border-slate-200 md:grid-cols-2">
                 <ArticleGridCard />
                 <ArticleGridCard />
                 {/* <div className="col-span-1 md:col-span-2 flex py-10 gap-5 border-b border-t border-slate-200">
@@ -62,8 +64,8 @@ export default function PostPage() {
                 <ArticleGridCard />
                 <ArticleGridCard />
               </div>
-              <div className="flex flex-col md:flex-row text-center gap-5 py-5">
-                <a className="rounded-3xl border border-black py-2 px-4 text-sm">
+              <div className="flex flex-col gap-5 py-5 text-center md:flex-row">
+                <a className="rounded-3xl border border-black px-4 py-2 text-sm">
                   See more recommendations
                 </a>
               </div>
