@@ -1,7 +1,7 @@
 import { MediumLogoShort } from "@/pages/components/MediumLogo.component";
-import { useSessionContext } from "../contexts/Session.context";
+import { useSessionContext } from "../../contexts/Session.context";
 import UserProfileMenu from "./UserProfileMenu.component";
-import { useAuthModalContext } from "../contexts/AuthModal.context";
+import { useAuthModalContext } from "../../contexts/AuthModal.context";
 
 export default function Navbar() {
   const { session } = useSessionContext();
@@ -97,7 +97,7 @@ export default function Navbar() {
                 <button className="self-center">Sign up</button>
               </a>
               <a
-                className="hidden -ml-2 px-3 py-2 hover:text-black md:flex"
+                className="-ml-2 hidden px-3 py-2 hover:text-black md:flex"
                 onClick={triggerSignIn}
               >
                 <button>Sign in</button>
