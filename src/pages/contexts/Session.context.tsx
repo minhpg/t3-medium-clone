@@ -18,7 +18,6 @@ export const SessionContextProvider = ({
   children,
 }: SessionContextProviderProps) => {
   const { data: session } = useSession();
-  console.log(session);
   return (
     <SessionContext.Provider value={{ session }}>
       {children}

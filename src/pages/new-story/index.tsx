@@ -3,7 +3,7 @@ import EditorNavbar from "./components/EditorNavbar.component";
 import dynamic from "next/dynamic";
 import EditorGuide from "./components/EditorGuide.component";
 
-const EditorBody = dynamic(() => import("./components/EditorBody.component"), {
+const EditorBody = dynamic(import("../../components/EditorBody.component"), {
   ssr: false,
 });
 
