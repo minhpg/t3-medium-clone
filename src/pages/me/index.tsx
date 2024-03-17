@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { BottomNavigationItems } from "../components/BottomNavigationItems";
 import Link from "next/link";
 import Navbar from "../components/Navbar.component";
-import { useSessionContext } from "../../contexts/Session.context";
+import { useSessionContext } from "../contexts/Session.context";
 
 export default function MePage() {
   const tabs = ["Home", "About"];

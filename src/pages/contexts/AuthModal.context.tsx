@@ -1,5 +1,3 @@
-import { Session } from "next-auth";
-import { useSession } from "next-auth/react";
 import {
   ReactNode,
   useContext,
@@ -66,3 +64,5 @@ export const AuthModalContextProvider = ({
 export const useAuthModalContext = () => {
   return useContext(AuthModalContext);
 };
+
+export default AuthModalContextProvider

@@ -1,7 +1,7 @@
 import { MediumLogoShort } from "@/pages/components/MediumLogo.component";
-import { useSessionContext } from "../../contexts/Session.context";
+import { useSessionContext } from "../contexts/Session.context";
 import UserProfileMenu from "./UserProfileMenu.component";
-import { useAuthModalContext } from "../../contexts/AuthModal.context";
+import { useAuthModalContext } from "../contexts/AuthModal.context";
 
 export default function Navbar() {
   const { session } = useSessionContext();

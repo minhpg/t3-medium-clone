@@ -18,7 +18,7 @@ export const SessionContextProvider = ({
   children,
 }: SessionContextProviderProps) => {
   const { data: session } = useSession();
-  console.log(session)
+  console.log(session);
   return (
     <SessionContext.Provider value={{ session }}>
       {children}
@@ -29,3 +29,5 @@ export const SessionContextProvider = ({
 export const useSessionContext = () => {
   return useContext(SessionContext);
 };
+
+export default SessionContextProvider;
