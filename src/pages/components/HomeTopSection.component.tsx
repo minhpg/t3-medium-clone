@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { MediumLogoFull } from "./MediumLogo.component";
 import dynamic from "next/dynamic";
 import AuthModal from "./AuthModal.component";
+import { useAuthModalContext } from "../contexts/AuthModal.context";
 
 const MGrid = dynamic(() => import("./MGrid.component"), { ssr: false });
 
@@ -10,6 +11,8 @@ export default function HomeTopSection() {
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [isScrollComplete, setIsScrollComplete] = useState(false);
+
+  const { triggerSignIn } = useAuthModalContext();
 
   const [height, setHeight] = useState<number>(0);
 
@@ -50,10 +53,13 @@ export default function HomeTopSection() {
               <button>Membership</button>
             </a>
             <a className="hidden p-3 md:flex">
-              <button>Write</button>
+              <button onClick={triggerSignIn}>Write</button>
             </a>
-            <a className="hidden p-3 sm:flex" onClick={() => setIsAuthDialogOpen(true)}>
-              <button>Sign in</button>
+            <a
+              className="hidden p-3 sm:flex"
+              onClick={() => setIsAuthDialogOpen(true)}
+            >
+              <button onClick={triggerSignIn}>Sign in</button>
             </a>
             <a
               className={`rounded-3xl bg-black p-3 text-white ${isScrollComplete ? `bg-green-600` : `bg-black`}`}

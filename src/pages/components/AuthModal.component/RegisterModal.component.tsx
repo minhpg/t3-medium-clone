@@ -4,7 +4,7 @@ import { AuthModalSwitchProps } from ".";
 export default function RegisterModal({ setLoginModal } : AuthModalSwitchProps) {
   return (
     <Dialog.Panel className="relative mx-auto flex h-3/4 w-full md:w-3/4 lg:w-1/2 flex-col justify-center bg-white shadow-xl">
-      <div className="mx-auto w-1/2 text-center">
+      <div className="mx-auto w-3/4 md:w-1/2 text-center">
         <div className="font-serif text-3xl">Join Medium.</div>
         <div className="mx-auto mt-20 flex flex-col gap-3">
           <a className="relative rounded-full border border-black px-3 py-2">
