@@ -1,10 +1,9 @@
-import { Dialog } from "@headlessui/react";
 import { AuthModalSwitchProps } from ".";
 
-export default function RegisterModal({ setLoginModal } : AuthModalSwitchProps) {
+export default function RegisterModal({ setLoginModal }: AuthModalSwitchProps) {
   return (
-    <Dialog.Panel className="relative mx-auto flex h-3/4 w-full md:w-3/4 lg:w-1/2 flex-col justify-center bg-white shadow-xl">
-      <div className="mx-auto w-3/4 md:w-1/2 text-center">
+    <div className="relative mx-auto flex h-3/4 w-full flex-col justify-center bg-white shadow-xl md:w-3/4 lg:w-1/2">
+      <div className="mx-auto w-3/4 text-center md:w-1/2">
         <div className="font-serif text-3xl">Join Medium.</div>
         <div className="mx-auto mt-20 flex flex-col gap-3">
           <a className="relative rounded-full border border-black px-3 py-2">
@@ -58,7 +57,10 @@ export default function RegisterModal({ setLoginModal } : AuthModalSwitchProps) 
         </div>
         <div className="mt-10">
           Already have an account?{" "}
-          <button className="font-bold text-green-700 hover:text-green-800" onClick={() => setLoginModal(true)}>
+          <button
+            className="font-bold text-green-700 hover:text-green-800"
+            onClick={() => setLoginModal(true)}
+          >
             Sign in
           </button>
         </div>
@@ -69,6 +71,6 @@ export default function RegisterModal({ setLoginModal } : AuthModalSwitchProps) 
           that Medium’s Privacy Policy applies to you.
         </div>
       </div>
-    </Dialog.Panel>
+    </div>
   );
 }

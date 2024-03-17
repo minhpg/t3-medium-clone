@@ -1,10 +1,9 @@
-import { Dialog } from "@headlessui/react";
 import { AuthModalSwitchProps } from ".";
 import { signIn } from 'next-auth/react';
 
 export default function LoginModal({ setLoginModal }: AuthModalSwitchProps) {
   return (
-    <Dialog.Panel className="relative mx-auto flex h-3/4 w-full md:w-3/4 lg:w-1/2 flex-col justify-center bg-white shadow-xl">
+    <div className="relative mx-auto flex h-3/4 w-full md:w-3/4 lg:w-1/2 flex-col justify-center bg-white shadow-xl">
       <div className="mx-auto w-3/4 md:w-1/2 text-center">
         <div className="font-serif text-3xl">Welcome back.</div>
         <div className="mx-auto mt-20 flex flex-col gap-3">
@@ -73,6 +72,6 @@ export default function LoginModal({ setLoginModal }: AuthModalSwitchProps) {
           that Medium’s Privacy Policy applies to you.
         </div>
       </div>
-    </Dialog.Panel>
+    </div>
   );
 }
