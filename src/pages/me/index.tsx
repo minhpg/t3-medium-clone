@@ -106,7 +106,7 @@ export default function MePage() {
             <div className="flex h-full flex-col">
               <div className="flex-1">
                 { session && <div className="ml-10 mt-20">
-                  <img className="h-20 w-20 rounded-full" src={session.user.image} />
+                  <img className="h-20 w-20 rounded-full" src={session.user.image || ""} />
                   <div className="mt-5 font-semibold">Minh Pham</div>
                   <div className="mt-6 text-xs text-green-600 hover:text-green-700">
                     Edit profile
