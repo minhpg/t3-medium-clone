@@ -4,6 +4,7 @@ export interface MediumLogoProps {
   className?: string;
 }
 
+
 export function MediumLogoFull({ className }: MediumLogoProps) {
   return (
     <Link href="/" className={className}>
@@ -29,3 +30,5 @@ export function MediumLogoShort({ className }: MediumLogoProps) {
     </Link>
   );
 }
+
+export default MediumLogoShort
